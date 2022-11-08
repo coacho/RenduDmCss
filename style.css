@@ -2,7 +2,10 @@
 .container{
     font-family: Arial, Helvetica, sans-serif;
 }
-
+a:link{
+    text-decoration: none;
+    color:black
+}
 /*gridlayout = header*/
 header{
     display: flex;
@@ -18,10 +21,14 @@ header > div{
     flex-wrap: wrap;
 }
 /*gridlayout = header2*/
-.barre_navi ul{
+.barre_navi  ul{
     list-style: none;
+    padding: auto;
 }
-
+.barre_navi ul li{
+    list-style: none;
+    padding: auto;
+}
 #menu{
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +43,7 @@ header > div{
 
 .dropdown {
     display: none;
+    padding: auto;
 }
    
 #menu > li:hover ul.dropdown {
@@ -48,7 +56,7 @@ header > div{
     display: flex;
     flex-direction: row;
     list-style:none;
-    position: static;
+    position: block;
 }
 
 .main{
@@ -67,6 +75,7 @@ header > div{
 /*gridlayout = footer*/
 footer{
 	background-color:#008bd3;
+    color:black;
 }
 #pied{
     display: flex;
