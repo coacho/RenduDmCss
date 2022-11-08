@@ -1,0 +1,133 @@
+
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*gridlayout = header*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*gridlayout = header2*/
+.barre_navi ul{
+    list-style: none;
+}
+
+#menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+#menu > li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+}
+   
+#menu > li:hover ul.dropdown {
+    display: block;
+}
+
+
+/*gridlayout = header3*/
+.accueil{
+    display: flex;
+    flex-direction: row;
+    list-style:none;
+    position: static;
+}
+
+.main{
+    position: static;
+}
+/*gridlayout = content*/
+#main_middle{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#main_middle > li {
+    justify-content: flex-start;
+}
+
+/*gridlayout = footer*/
+footer{
+	background-color:#008bd3;
+}
+#pied{
+    display: flex;
+    flex-direction: row;
+    list-style:none;
+}
+#pied li{
+    list-style:none;
+}
+#last{
+	background-color:#00327b;
+}
+
+/*GRIDLAYOUT*/
+
+header {
+    grid-area: header;
+}
+.barre_navi {
+    grid-area: header2;
+}
+.accueil{
+    grid-area: header3;
+}
+.lateral {
+        grid-area: sidebar;
+    }
+.main {
+        grid-area: content;
+    }
+footer {
+        grid-area: footer;
+    }
+
+.container {
+    	display: grid;
+    	grid-gap: 0.8rem;
+    	grid-template-areas:
+     		"header"
+            "header2"
+            "header3"
+     		"content"
+     		"sidebar"
+     		"footer";
+  	}
+
+    @media only screen and (min-width: 768px)   {
+    .container {
+      	grid-gap: 1rem;
+        grid-template-columns: auto 30%;
+        grid-template-areas:
+    	"header  header"
+        "header2  header2"
+        "header3  header3"
+        "content  sidebar"
+        "footer   footer";
+    }
+    #menu > li:hover ul.dropdown {
+        padding-left: 0px;
+        position:relative;
+        display: block;
+    }
+    
+}
